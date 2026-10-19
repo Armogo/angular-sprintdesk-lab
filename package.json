@@ -11,7 +11,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test:ci": "ng test --watch=false",
-    "check": "pnpm lint && pnpm format:check && pnpm test:ci && pnpm build"
+    "check": "pnpm lint && pnpm format:check && pnpm test:ci && pnpm build",
+    "test:coverage": "ng test --watch=false --coverage",
+    "prepare": "husky"
   },
   "private": true,
   "packageManager": "pnpm@10.17.1",
@@ -31,9 +33,12 @@
     "@angular/cli": "^22.2.3",
     "@angular/compiler-cli": "^22.2.0",
     "@eslint/js": "^10.0.1",
+    "@vitest/coverage-v8": "5.0.5",
     "angular-eslint": "22.6.0",
     "eslint": "^10.12.0",
+    "husky": "^9.1.7",
     "jsdom": "^30.0.0",
+    "lint-staged": "^17.6.0",
     "prettier": "^3.8.1",
     "typescript": "~6.0.2",
     "typescript-eslint": "8.71.0",
